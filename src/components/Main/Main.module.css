@@ -1,0 +1,9 @@
+main {
+    background-image: url("https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg?cs=srgb&dl=pexels-kaique-rocha-125510.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*filter: blur(5px);*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
