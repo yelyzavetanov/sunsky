@@ -1,0 +1,20 @@
+.iconsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    background: #fff;
+}
+
+.iconsContainer img {
+    height: 7em;
+    filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+    /*drop-shadow: 1em 0 0 #000;*/
+}
+
+.cityContainer {
+    background: #fff;
+    /*background: rgba(255, 255, 255, 0.3);*/
+    display: flex;
+    /*color: #ffffff;*/
+    padding: 1em;
+    font-weight: 500;
+}

@@ -1,0 +1,22 @@
+.searchInputContainer {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: 0.5em 1em;
+    border: none;
+    font-size: 1em;
+    /*background: rgba(255, 255, 255, 0.3);*/
+    background: transparent;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.searchInputContainer img {
+    height: 1.7em;
+    margin: 0 0.5em;
+}

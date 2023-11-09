@@ -1,0 +1,12 @@
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+}
+
+img {
+    /*color: #3c21b7;*/
+    height: 3em;
+}

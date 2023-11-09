@@ -1,0 +1,13 @@
+.item {
+    padding: 1em;
+    /*background: red;*/
+    border-bottom: transparent 0.1em solid;
+    width: 20%;
+    color: #fff;
+    font-weight: 500;
+}
+
+.item:hover {
+    /*color: #3c21b7;*/
+    /*border-bottom: #3c21b7 0.1em solid;*/
+}

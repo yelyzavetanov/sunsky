@@ -1,0 +1,17 @@
+.sidebarItem {
+    background: #ffffff;
+    /*height: 15em;*/
+    /*width: 20%;*/
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.itemInfo {
+    padding: 0.5em;
+}
+
+.sidebarItem img {
+    width: 100%;
+    height: auto;
+
+}

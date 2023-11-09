@@ -12,12 +12,12 @@ const Header = () => {
                 <SearchInput/>
                 <div>About us</div>
             </div>
-            header
+            {/*header*/}
             <div className={s.menuItemsContainer}>
-                <HeaderMenuItem/>
-                <HeaderMenuItem/>
-                <HeaderMenuItem/>
-                <HeaderMenuItem/>
+                <HeaderMenuItem>Today</HeaderMenuItem>
+                <HeaderMenuItem>Hourly</HeaderMenuItem>
+                <HeaderMenuItem>10 Days</HeaderMenuItem>
+                <HeaderMenuItem>Monthly</HeaderMenuItem>
             </div>
         </header>
     )

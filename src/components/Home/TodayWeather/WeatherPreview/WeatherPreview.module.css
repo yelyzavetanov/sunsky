@@ -1,0 +1,47 @@
+.weatherPreview {
+    /*background-image: url("https://i.pinimg.com/originals/c5/ae/10/c5ae102d1e5e2f80a3d39cf7beda1772.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    height: 15em;
+    backdrop-filter: none;
+}
+
+.cityContainer {
+    /*background: rgba(255, 255, 255, 0.3);*/
+    background: #fff;
+    display: flex;
+    /*color: #ffffff;*/
+    padding: 1em;
+    font-weight: 500;
+    /*font-size: 1.1em;*/
+}
+
+.weatherInformation {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    height: 10em;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.mainInformation {
+    /*color: #ffffff;*/
+}
+
+.mainTemperature {
+    font-size: 3em;
+}
+
+.temperature {
+
+}
+
+.weatherDescription {
+    text-align: center;
+}
+
+.weatherIconImg {
+    height: 6em;
+}
