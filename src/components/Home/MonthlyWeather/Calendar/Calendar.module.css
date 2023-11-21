@@ -1,0 +1,18 @@
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5em;
+    padding: 0 0 1em 0;
+    justify-content: space-between;
+    row-gap: 0.25em;
+}
+
+.weekRow {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.weekRow div {
+    width: 10%;
+    padding: 1.5%;
+}

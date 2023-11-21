@@ -4,3 +4,16 @@
     /*padding: 1em;*/
     width: 20%;
 }
+
+@media screen and (max-width: 70em) {
+    .sidebar {
+        min-width: 25%;
+        margin: 0.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+}

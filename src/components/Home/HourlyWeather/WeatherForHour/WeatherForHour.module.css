@@ -1,0 +1,37 @@
+.weatherForHour, .weatherForNewDayHour {
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time {
+
+}
+
+.temperature {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+}
+
+.humidity {
+
+}
+
+.wind {
+
+}
+
+.weatherForNewDayHour {
+    background: #ffffff;
+    color: #000000;
+}
+
+.weatherForNewDayHour img {
+    filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.1));
+}

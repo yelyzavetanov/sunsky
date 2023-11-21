@@ -5,18 +5,21 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Main from "./components/Main/Main";
 import Sidebar from "./components/Sidebar/Sidebar";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
-  return (
-    <div className={s.App}>
-      <Header/>
-      <Main>
-          <Home/>
-          <Sidebar/>
-      </Main>
-      <Footer/>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <div className={s.App}>
+                <Header/>
+                <Main>
+                    <Home/>
+                    <Sidebar/>
+                </Main>
+                <Footer/>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

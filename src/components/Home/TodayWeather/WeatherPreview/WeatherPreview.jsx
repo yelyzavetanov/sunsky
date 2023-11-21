@@ -6,7 +6,8 @@ const WeatherPreview = () => {
     return (
         <div className={s.weatherPreview}>
             <div className={s.cityContainer}>
-                Your city, your country
+                <span>Your city, your country</span>
+                <span>20th June 2023</span>
             </div>
             <div className={s.weatherInformation}>
                 <div className={s.mainInformation}>
@@ -14,7 +15,7 @@ const WeatherPreview = () => {
                     <div className={s.temperature}>Day: 31° Night:25°</div>
                 </div>
                 <div className={s.weatherDescription}>
-                    <div><img className={s.weatherIconImg} alt={""} src={weatherIcon}/></div>
+                    <div className={s.iconContainer}><img className={s.weatherIconImg} alt={""} src={weatherIcon}/></div>
                     <div>cloudy</div>
                 </div>
             </div>

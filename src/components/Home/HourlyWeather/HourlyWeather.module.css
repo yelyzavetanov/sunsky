@@ -1,0 +1,17 @@
+.hourlyWeather {
+    color: #fff;
+}
+
+.title {
+    padding: 1em;
+    background: #fff;
+    color: #000;
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemsContainer {
+    /*padding: 0.5em 0;*/
+}

@@ -9,6 +9,8 @@ header {
 .logoContainer {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    /*background: #fff;*/
 }
 
 .menuItemsContainer {

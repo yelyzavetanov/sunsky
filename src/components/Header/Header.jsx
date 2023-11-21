@@ -14,10 +14,10 @@ const Header = () => {
             </div>
             {/*header*/}
             <div className={s.menuItemsContainer}>
-                <HeaderMenuItem>Today</HeaderMenuItem>
-                <HeaderMenuItem>Hourly</HeaderMenuItem>
-                <HeaderMenuItem>10 Days</HeaderMenuItem>
-                <HeaderMenuItem>Monthly</HeaderMenuItem>
+                <HeaderMenuItem path={"/"}>Today</HeaderMenuItem>
+                <HeaderMenuItem path={"/hourlyWeather"}>Hourly</HeaderMenuItem>
+                <HeaderMenuItem path={"/tenDaysWeather"}>10 Days</HeaderMenuItem>
+                <HeaderMenuItem path={"/monthlyWeather"}>Monthly</HeaderMenuItem>
             </div>
         </header>
     )

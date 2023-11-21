@@ -1,0 +1,51 @@
+.monthlyWeather {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    /*align-items: center;*/
+}
+
+.title {
+    color: #000000;
+    background: #ffffff;
+    text-align: left;
+    font-weight: 500;
+    padding: 1em;
+}
+
+.selectMonthContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+}
+
+.monthArrowLeftContainer, .monthArrowRightContainer {
+    display: flex;
+    align-items: center;
+}
+
+.monthArrowLeftContainer img, .monthArrowRightContainer img {
+    height: 2em;
+}
+
+.monthArrowLeftContainer img {
+    padding-top: 0.1em;
+}
+
+.monthArrowRightContainer img {
+    padding-bottom: 0.1em;
+    transform: rotate(180deg);
+}
+
+.monthArrowLeftContainer:hover, .monthArrowRightContainer:hover {
+    font-weight: 500;
+}
+
+.calendarContainer {
+    width: 100%;
+    /*background: red;*/
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+}

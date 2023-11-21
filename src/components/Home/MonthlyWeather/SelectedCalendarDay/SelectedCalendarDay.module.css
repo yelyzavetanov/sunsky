@@ -1,0 +1,16 @@
+.selectedCalendarDay {
+    background: #fff;
+    color: #000000;
+}
+
+.title {
+    padding: 1em;
+    font-weight: 500;
+    text-align: left;
+}
+
+.halfDaysContainer {
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+}

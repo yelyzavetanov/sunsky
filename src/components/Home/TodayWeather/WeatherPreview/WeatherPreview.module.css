@@ -10,6 +10,7 @@
     /*background: rgba(255, 255, 255, 0.3);*/
     background: #fff;
     display: flex;
+    justify-content: space-between;
     /*color: #ffffff;*/
     padding: 1em;
     font-weight: 500;
@@ -42,6 +43,10 @@
     text-align: center;
 }
 
+.iconContainer {
+    margin: -1.5em;
+}
+
 .weatherIconImg {
-    height: 6em;
+    height: 6.5em;
 }

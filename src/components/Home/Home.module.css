@@ -1,8 +1,22 @@
 .home {
-    /*background: #ffffff;*/
     margin: 1em;
-    /*padding: 0.5em;*/
-    min-width: 50%;
+    width: 50%;
     backdrop-filter: blur(0.5em);
     border: rgba(255, 255, 255, 0.1) 0.1em solid;
+}
+
+@media screen and (max-width: 70em) {
+    .home {
+        min-width: 70%;
+        margin: 0.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        display: unset;
+        width: 95%;
+        padding: 0;
+        margin: 0;
+    }
 }

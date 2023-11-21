@@ -1,0 +1,63 @@
+.dayWeatherContainer, .openedDayWeatherContainer {
+    transition: 0.5s;
+}
+
+.dayWeatherContainer {
+    color: #ffffff;
+}
+
+.openedDayWeatherContainer {
+    color: #000;
+    background: #fff;
+}
+
+.dayWeather {
+    display: flex;
+    justify-content: space-evenly;
+    /*color: #ffffff;*/
+}
+
+.day, .temperature, .description, .humidity, .wind, .moreDetailsButton {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: center;
+}
+
+.moreDetailsButton {
+    background: transparent;
+    border: none;
+    /*color: #ffffff;*/
+}
+
+.moreDetailsButton:hover {
+    font-weight: 500;
+    /*text-decoration-style: solid;*/
+    /*text-decoration-line: underline;*/
+}
+
+.description img {
+    filter: drop-shadow(0 0 0.1em rgba(0, 0, 0, 0.2));
+}
+
+.temperature {
+    font-weight: 500;
+}
+
+.day {
+    justify-content: left;
+}
+
+.detailsContainer {
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dayContainer, .nightContainer {
+    text-align: left;
+}
+
+.detailsDay {
+    font-weight: 500;
+}

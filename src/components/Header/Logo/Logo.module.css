@@ -1,12 +1,15 @@
-.logo {
+.logo, .logo a {
     display: flex;
     align-items: center;
-    font-size: 1.1em;
+    /*font-size: 1.1em;*/
     font-weight: 500;
     color: #fff;
+    text-decoration: none;
 }
 
-img {
+.logo img {
     /*color: #3c21b7;*/
-    height: 3em;
+    height: 3.5em;
+    margin-right: -0.8em;
+    filter: brightness(200%);
 }

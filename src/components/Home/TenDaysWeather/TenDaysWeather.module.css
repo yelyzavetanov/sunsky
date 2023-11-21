@@ -1,0 +1,12 @@
+.tenDaysWeather {
+
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    color: #000000;
+    font-weight: 500;
+    padding: 1em;
+}
