@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import s from './App.module.css';
 import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
@@ -14,8 +14,6 @@ function App(props) {
 
     const weatherBackgrounds = weather.weatherBackgrounds;
     const todayWeatherDescription = weather.todayWeather.day.description;
-
-    console.log("store: ", props.store.getState());
 
     return (
         <BrowserRouter>

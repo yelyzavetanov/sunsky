@@ -17,13 +17,8 @@ export const changeCalendarMonth = createAction("weather/changeCalendarMonth", (
     }
 })
 
-// console.log(changeCalendarMonth("December"));
 
 const month = "April";
-
-let action = incrementByAmount();
-action = incrementByAmount(3);
-// console.log(incrementByAmount.type);
 
 const initialState = {
     value: 0,
@@ -57,30 +52,21 @@ const initialState = {
     },
 }
 
-// console.log(randomizeCalendar("March"));
-// console.log(initialState.calendarDays);
-
 const weatherReducer = createReducer(initialState, (builder) => {
     builder
-        .addCase(increment, (state, action) => {
+        .addCase(increment, (state) => {
             state.value++;
         })
-        .addCase(decrement, (state, action) => {
+        .addCase(decrement, (state) => {
             state.value--;
         })
         .addCase(incrementByAmount, (state, action) => {
             state.value += action.payload;
         })
         .addCase(changeCalendarMonth, (state, action) => {
-            // console.log(randomizeCalendar(action.payload.month));
             state.calendarDays = randomizeCalendar(action.payload.month);
-            // console.log("dispatch", action.payload.month, state.calendarDays);
         })
-        .addDefaultCase((state, action) => {});
+        .addDefaultCase(() => {});
 })
-
-// export function changeCalendarMonth(month) {
-//
-// }
 
 export default weatherReducer;
