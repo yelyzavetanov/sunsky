@@ -8,6 +8,11 @@
     color: #000;
 }
 
+.calendarDayWeather a {
+    color: #000000;
+    text-decoration: none;
+}
+
 .shownCalendarDay {
     height: 100%;
     display: flex;

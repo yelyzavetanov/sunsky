@@ -1,10 +1,9 @@
 import React from "react";
 import s from "./TenDaysWeather.module.css";
 import DayWeather from "./DayWeather/DayWeather";
-import {randomizeTenDaysWeather} from "../../WeatherRandomizer/weatherRandomizer";
 
-const TenDaysWeather = () => {
-    const tenDaysWeatherArray = randomizeTenDaysWeather();
+const TenDaysWeather = (props) => {
+    const tenDaysWeatherArray = props.tenDaysWeather;
 
     return (
         <div className={s.tenDaysWeather}>
@@ -14,6 +13,7 @@ const TenDaysWeather = () => {
             </div>
             {tenDaysWeatherArray.map( e =>
                 <DayWeather
+                    weatherIcons={props.weatherIcons}
                     key={tenDaysWeatherArray.indexOf(e)}
                     weatherInfo={e}
                 />

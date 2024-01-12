@@ -18,7 +18,7 @@ const HalfDayWeather = (props) => {
                 <div>{props.weatherInfo.wind}</div>
             </div>
             <div>
-                <div><img alt={""} src={weatherIcon}/></div>
+                <div><img alt={""} src={props.weatherIcons[props.weatherInfo.description]}/></div>
             </div>
         </div>
     )

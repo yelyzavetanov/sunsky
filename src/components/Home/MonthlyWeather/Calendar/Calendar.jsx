@@ -1,8 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import s from "./Calendar.module.css";
 import CalendarDayWeather from "./CalendarDayWeather/CalendarDayWeather";
 
 const Calendar = (props) => {
+    let nullDayNumber = 0;
+
+    const generateDayKey = (element) => {
+        if (!element) {
+            nullDayNumber++;
+            return "nullDay" + nullDayNumber;
+        } else {
+            return props.monthWeatherArray.indexOf(element);
+        }
+    }
+
     return (
         <div className={s.calendarContainer}>
             <div className={s.weekRow}>
@@ -17,7 +28,8 @@ const Calendar = (props) => {
             <div className={s.calendar}>
                 {props.monthWeatherArray.map(e =>
                     <CalendarDayWeather
-                        key={props.monthWeatherArray.indexOf(e)}
+                        weatherIcons={props.weatherIcons}
+                        key={generateDayKey(e)}
                         dayWeather={e}
                         setSelectedDayIndex={props.setSelectedDayIndex}
                         dayIndex={props.monthWeatherArray.indexOf(e)}

@@ -3,6 +3,7 @@
     width: 50%;
     backdrop-filter: blur(0.5em);
     border: rgba(255, 255, 255, 0.1) 0.1em solid;
+    background: rgba(0, 0, 0, 0.05);
 }
 
 @media screen and (max-width: 70em) {

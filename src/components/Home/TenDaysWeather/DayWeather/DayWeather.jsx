@@ -12,7 +12,7 @@ const DayWeather = (props) => {
                 <div className={s.day}>{props.weatherInfo.date} {props.weatherInfo.week}</div>
                 <div className={s.temperature}>{props.weatherInfo.day.temperature}</div>
                 <div className={s.description}>
-                    <img alt={""} src={weatherIcon}/>
+                    <img alt={""} src={props.weatherIcons[props.weatherInfo.day.description]}/>
                     {props.weatherInfo.day.description}
                 </div>
                 <div className={s.humidity}>{props.weatherInfo.day.humidity}</div>
@@ -26,12 +26,14 @@ const DayWeather = (props) => {
             </div>
             {areMoreDetailsOpened && <div className={s.detailsContainer}>
                 <HalfDayWeather
+                    weatherIcons={props.weatherIcons}
                     dayTime={"day"}
                     weatherInfo={props.weatherInfo.day}
                     date={props.weatherInfo.date}
                     week={props.weatherInfo.week}
                 />
                 <HalfDayWeather
+                    weatherIcons={props.weatherIcons}
                     dayTime={"night"}
                     weatherInfo={props.weatherInfo.night}
                     date={props.weatherInfo.date}

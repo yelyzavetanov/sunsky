@@ -4,12 +4,13 @@ import WeatherPreview from "./WeatherPreview/WeatherPreview";
 import WeatherIcons from "./WeatherIcons/WeatherIcons";
 import WeatherDetails from "./WeatherDetails/WeatherDetails";
 
-const TodayWeather = () => {
+const TodayWeather = (props) => {
+    // console.log(props.todayWeather);
     return (
         <div className={s.todayWeatherBlock}>
-            <WeatherPreview/>
+            <WeatherPreview weatherIcons={props.weatherIcons} todayWeather={props.todayWeather}/>
             <WeatherIcons/>
-            <WeatherDetails/>
+            <WeatherDetails todayWeather={props.todayWeather}/>
         </div>
     )
 }
