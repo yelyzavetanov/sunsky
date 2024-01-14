@@ -13,10 +13,18 @@ const CalendarDayWeather = (props) => {
             <a href={"#selectedDay"}>
                 {props.dayWeather
                     ? <div className={s.shownCalendarDay}>
-                        <div>{props.dayWeather.week} {props.dayWeather.date}</div>
-                        <div className={s.iconContainer}><img alt={""} src={props.weatherIcons[props.dayWeather.day.description]}/></div>
-                        <div>{props.dayWeather.day.description}</div>
-                        <div>{props.dayWeather.day.temperature}/{props.dayWeather.night.temperature}</div>
+                        <div>
+                            <span className={s.weekDay}>{props.dayWeather.week + " "}</span>
+                            {props.dayWeather.date}th
+                        </div>
+                        <div className={s.iconContainer}>
+                            <img alt={""} src={props.weatherIcons.day[props.dayWeather.day.description]}/>
+                        </div>
+                        <div className={s.description}>{props.dayWeather.day.description}</div>
+                        <div>
+                            {props.dayWeather.day.temperature}
+                            <span className={s.nightTemperature}>/{props.dayWeather.night.temperature}</span>
+                        </div>
                     </div>
                     : <div>-</div>
                 }

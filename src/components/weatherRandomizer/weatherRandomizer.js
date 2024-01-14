@@ -1,10 +1,12 @@
 class DayOfMonth {
-    constructor(month, week, currentDate, day, night, key) {
+    constructor(month, week, currentDate, day, night, morning, evening) {
         this.month = month;
         this.week = week;
         this.date = currentDate;
         this.day = day;
         this.night = night;
+        this.morning = morning;
+        this.evening = evening;
     }
 }
 
@@ -66,18 +68,18 @@ export function randomizeCalendar(month) {
     const monthWeatherArray = [];
     const arrayMonth = monthDays.filter(e => e.month === month)[0];
 
-    randomizeDaysWeather(arrayMonth, monthWeatherArray);
+    randomizeDaysWeather(arrayMonth, monthWeatherArray, 1);
 
     if (monthWeatherArray.length % 7 !== 0) {
-        // console.log("calendar editing");
         editCalendar(monthWeatherArray, weekDays);
     }
 
     return monthWeatherArray;
 }
 
-function randomizeDaysWeather (arrayMonth, weatherArray) {
-    for (let i = 1; i <= arrayMonth.days; i++) {
+function randomizeDaysWeather (arrayMonth, weatherArray, daysNumber) {
+    for (let i = daysNumber; i <= daysNumber + arrayMonth.days - 1; i++) {
+        // console.log(weatherArray);
         weatherArray.push(randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIndex, i));
 
         if (randomWeekDayIndex === weekDays.length -1) {
@@ -88,7 +90,7 @@ function randomizeDaysWeather (arrayMonth, weatherArray) {
     }
 }
 
-function randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIndex, i) {
+function randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIndex, dayNumber) {
     const dayTemperature = randomizeTemperature();
 
     const day = new HalfOfDay(
@@ -107,9 +109,11 @@ function randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIn
     const dayOfMonth = new DayOfMonth(
         arrayMonth.month,
         weekDays[randomWeekDayIndex],
-        i.toString(),
+        dayNumber.toString(),
         day,
         night,
+        randomizeDescription(),
+        randomizeDescription(),
     );
 
     return dayOfMonth;
@@ -158,13 +162,14 @@ export function randomizeHourlyWeather() {
     return hourlyWeather;
 }
 
-export function randomizeTenDaysWeather() {
+export function randomizeTenDaysWeather(month, dayNumber) {
     const tenDaysWeatherArray = [];
-    randomizeDaysWeather({month: "July", days: 10}, tenDaysWeatherArray);
+    randomizeDaysWeather({month: month, days: 10}, tenDaysWeatherArray, dayNumber);
     return tenDaysWeatherArray;
 }
 
-export function randomizeTodayWeather() {
-    const todayWeather = randomizeOneDayWeather(weatherDescriptions, "May", randomWeekDayIndex, 1);
-    return todayWeather;
+export function randomizeTodayWeather(month, dayNumber) {
+    const arrayMonth = monthDays.filter(e => e.month === month)[0];
+
+    return randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIndex, dayNumber);
 }

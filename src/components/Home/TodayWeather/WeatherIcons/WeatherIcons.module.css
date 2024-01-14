@@ -1,7 +1,10 @@
+.weatherIcons {
+    background: #ffffff;
+}
+
 .iconsContainer {
     display: flex;
     justify-content: space-evenly;
-    background: #fff;
 }
 
 .iconsContainer img {
@@ -11,10 +14,19 @@
 }
 
 .cityContainer {
-    background: #fff;
     /*background: rgba(255, 255, 255, 0.3);*/
     display: flex;
-    /*color: #ffffff;*/
     padding: 1em;
     font-weight: 500;
+}
+
+@media screen and (max-width: 40em) {
+    .iconsContainer img {
+        width: 6em;
+        height: 6em;
+    }
+
+    .iconsContainer {
+        padding-bottom: 1em;
+    }
 }

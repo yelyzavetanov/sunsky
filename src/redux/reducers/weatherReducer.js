@@ -3,7 +3,7 @@ import {
     randomizeCalendar, randomizeHourlyWeather,
     randomizeTenDaysWeather,
     randomizeTodayWeather
-} from "../../components/WeatherRandomizer/weatherRandomizer";
+} from "../../components/weatherRandomizer/weatherRandomizer";
 
 export const increment = createAction('counter/increment');
 const decrement = createAction('counter/decrement');
@@ -18,15 +18,16 @@ export const changeCalendarMonth = createAction("weather/changeCalendarMonth", (
 })
 
 
-const month = "April";
+const month = "August";
+const day = 8;
 
 const initialState = {
     value: 0,
 
-    calendarDays: randomizeCalendar(month),
-    tenDaysWeather: randomizeTenDaysWeather(),
+    todayWeather: randomizeTodayWeather(month, day),
     hourlyWeather: randomizeHourlyWeather(),
-    todayWeather: randomizeTodayWeather(),
+    tenDaysWeather: randomizeTenDaysWeather(month, day),
+    calendarDays: randomizeCalendar(month),
 
     weatherBackgrounds: {
         clear: {

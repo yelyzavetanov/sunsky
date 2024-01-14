@@ -9,7 +9,7 @@ const TodayWeather = (props) => {
     return (
         <div className={s.todayWeatherBlock}>
             <WeatherPreview weatherIcons={props.weatherIcons} todayWeather={props.todayWeather}/>
-            <WeatherIcons/>
+            <WeatherIcons weatherIcons={props.weatherIcons} todayWeather={props.todayWeather}/>
             <WeatherDetails todayWeather={props.todayWeather}/>
         </div>
     )

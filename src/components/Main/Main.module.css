@@ -2,11 +2,20 @@ main {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 600px) {
     main {
         display: unset;
         margin: 0.5em 0;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    main {
+        padding: 0;
+        margin: 0;
+        flex-direction: column-reverse;
     }
 }

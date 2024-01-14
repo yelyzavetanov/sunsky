@@ -21,6 +21,7 @@ function App(props) {
                 <div className={s.App}>
                     <Header/>
                     <Main>
+                        <Sidebar/>
                         <Home
                             changeCalendarMonth={props.changeCalendarMonth}
                             calendar={weather.calendarDays}
@@ -28,7 +29,6 @@ function App(props) {
                             hourlyWeather={weather.hourlyWeather}
                             todayWeather={weather.todayWeather}
                         />
-                        <Sidebar/>
                     </Main>
                     <Footer/>
                 </div>

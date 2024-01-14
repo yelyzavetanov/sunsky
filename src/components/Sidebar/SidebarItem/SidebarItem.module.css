@@ -15,3 +15,26 @@
     height: auto;
 
 }
+
+@media screen and (max-width: 40em) {
+    .sidebarItem {
+        display: none;
+    }
+
+    .sidebarItem:first-child {
+        display: flex;
+        background: #ffffff;
+        justify-content: space-between;
+        margin: 0.5em 0;
+    }
+
+    .sidebarItem img {
+        display: inline-block;
+        height: 5em;
+        width: auto;
+    }
+
+    .itemInfo {
+        width: 100%;
+    }
+}

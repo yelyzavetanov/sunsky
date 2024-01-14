@@ -16,6 +16,7 @@ const SelectedCalendarDay = (props) => {
                     weatherInfo={props.selectedDay.day}
                     date={props.selectedDay.date}
                     week={props.selectedDay.week}
+                    isNight={false}
                 />
                 <HalfDayWeather
                     weatherIcons={props.weatherIcons}
@@ -23,6 +24,7 @@ const SelectedCalendarDay = (props) => {
                     weatherInfo={props.selectedDay.night}
                     date={props.selectedDay.date}
                     week={props.selectedDay.week}
+                    isNight={true}
                 />
             </div>
         </div>

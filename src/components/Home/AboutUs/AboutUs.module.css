@@ -1,0 +1,15 @@
+.aboutUs {
+    color: white;
+    text-align: left;
+}
+
+.title {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 500;
+    padding: 1em;
+}
+
+.mainInfo {
+    padding: 1em;
+}

@@ -8,6 +8,7 @@ const MonthlyWeather = (props) => {
     const [rerender, setRerender] = useState(false);
 
     const [selectedDayIndex, setSelectedDayIndex] = useState(10);
+    const [year, setYear] = useState(2024);
 
     const months = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December",];
@@ -33,16 +34,32 @@ const MonthlyWeather = (props) => {
         props.changeCalendarMonth(month);
     }
 
+    const changeYear = (year) => {
+        setYear(year);
+        changeMonth(monthWeatherArray[10].month);
+    }
+
     return (
         <div className={s.monthlyWeather}>
-            <div className={s.title}>Weather for {monthWeatherArray[10].month} 2024 in your city</div>
+            <div className={s.title}>Weather for {monthWeatherArray[10].month} {year} in your city</div>
+            <div className={s.selectYearContainer}>
+                <div className={s.selectArrowLeftContainer} onClick={() => changeYear(year - 1)}>
+                    <img alt={""} src={arrowIcon}/>
+                    {year - 1}
+                </div>
+                <div className={s.yearContainer}>{year}</div>
+                <div className={s.selectArrowRightContainer} onClick={() => changeYear(year + 1)}>
+                    {year + 1}
+                    <img alt={""} src={arrowIcon}/>
+                </div>
+            </div>
             <div className={s.selectMonthContainer}>
-                <div className={s.monthArrowLeftContainer} onClick={() => changeMonth(previousMonth)}>
+                <div className={s.selectArrowLeftContainer} onClick={() => changeMonth(previousMonth)}>
                     <img alt={""} src={arrowIcon}/>
                     {previousMonth}
                 </div>
-                <div>{monthWeatherArray[10].month}</div>
-                <div className={s.monthArrowRightContainer} onClick={() => changeMonth(nextMonth)}>
+                <div className={s.monthContainer}>{monthWeatherArray[10].month}</div>
+                <div className={s.selectArrowRightContainer} onClick={() => changeMonth(nextMonth)}>
                     {nextMonth}
                     <img alt={""} src={arrowIcon}/>
                 </div>

@@ -1,16 +1,10 @@
 import React from "react";
 import s from "./WeatherPreview.module.css";
-import weatherIcon from "../../../../img/weatherIcons/static/cloudy.svg";
 
 const WeatherPreview = (props) => {
     const weather = props.todayWeather;
 
-    const testStyle = {
-        background: "red",
-        backgroundImage: `url(${weatherIcon})`,
-        // color: "red",
-    }
-
+    // console.log(weather.month);
 
     return (
         <div className={s.weatherPreview}>
@@ -27,8 +21,7 @@ const WeatherPreview = (props) => {
                 </div>
                 <div className={s.weatherDescription}>
                     <div className={s.iconContainer}>
-                        {/*<div style={testStyle} className={s.icon}>icon</div>*/}
-                        <img className={s.weatherIconImg} alt={""} src={props.weatherIcons[props.todayWeather.day.description]}/>
+                        <img className={s.weatherIconImg} alt={""} src={props.weatherIcons.day[props.todayWeather.day.description]}/>
                     </div>
                     <div>{weather.day.description}</div>
                 </div>

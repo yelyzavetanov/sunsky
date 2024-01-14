@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  width: 100%;
 
   /*background-image: url("https://images.wallpaperscraft.ru/image/single/zont_dozhd_kapli_119206_6000x4000.jpg");*/
   /*background-image: image("src/img/background/thunderstorm01.jpg");*/

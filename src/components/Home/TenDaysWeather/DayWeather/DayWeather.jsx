@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import s from "./DayWeather.module.css";
-import weatherIcon from "../../../../img/weatherIcons/static/night.svg";
 import HalfDayWeather from "./HalfDayWeather/HalfDayWeather";
 
 const DayWeather = (props) => {
@@ -12,7 +11,7 @@ const DayWeather = (props) => {
                 <div className={s.day}>{props.weatherInfo.date} {props.weatherInfo.week}</div>
                 <div className={s.temperature}>{props.weatherInfo.day.temperature}</div>
                 <div className={s.description}>
-                    <img alt={""} src={props.weatherIcons[props.weatherInfo.day.description]}/>
+                    <img alt={""} src={props.weatherIcons.day[props.weatherInfo.day.description]}/>
                     {props.weatherInfo.day.description}
                 </div>
                 <div className={s.humidity}>{props.weatherInfo.day.humidity}</div>
@@ -31,6 +30,7 @@ const DayWeather = (props) => {
                     weatherInfo={props.weatherInfo.day}
                     date={props.weatherInfo.date}
                     week={props.weatherInfo.week}
+                    isNight={false}
                 />
                 <HalfDayWeather
                     weatherIcons={props.weatherIcons}
@@ -38,6 +38,7 @@ const DayWeather = (props) => {
                     weatherInfo={props.weatherInfo.night}
                     date={props.weatherInfo.date}
                     week={props.weatherInfo.week}
+                    isNight={true}
                 />
             </div>}
         </div>

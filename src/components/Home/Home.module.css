@@ -13,11 +13,25 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {*/
+/*    .home {*/
+/*        display: unset;*/
+/*        width: 95%;*/
+/*        padding: 0;*/
+/*        margin: 0;*/
+/*    }*/
+/*}*/
+
+@media screen and (max-width: 40em) {
     .home {
-        display: unset;
-        width: 95%;
+        display: inherit;
+        width: 100vw;
         padding: 0;
         margin: 0;
+        border: none;
+        height: 100%;
+        /*background: red;*/
+        /*background-color: red;*/
+        /*color: red;*/
     }
 }

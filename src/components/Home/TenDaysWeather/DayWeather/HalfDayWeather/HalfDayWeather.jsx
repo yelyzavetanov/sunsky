@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./HalfDayWeather.module.css";
-import weatherIcon from "../../../../../img/weatherIcons/static/night.svg";
 
 const HalfDayWeather = (props) => {
     return (
@@ -18,7 +17,12 @@ const HalfDayWeather = (props) => {
                 <div>{props.weatherInfo.wind}</div>
             </div>
             <div>
-                <div><img alt={""} src={props.weatherIcons[props.weatherInfo.description]}/></div>
+                <div>
+                    {props.isNight
+                        ? <img alt={""} src={props.weatherIcons.night[props.weatherInfo.description]}/>
+                        : <img alt={""} src={props.weatherIcons.day[props.weatherInfo.description]}/>
+                    }
+                </div>
             </div>
         </div>
     )

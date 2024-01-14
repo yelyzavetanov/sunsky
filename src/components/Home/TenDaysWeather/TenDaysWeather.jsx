@@ -9,7 +9,9 @@ const TenDaysWeather = (props) => {
         <div className={s.tenDaysWeather}>
             <div className={s.title}>
                 <span>Weather for 10 days</span>
-                <span>20-30th June 2023</span>
+                <span>
+                    {props.tenDaysWeather[0].date}-{props.tenDaysWeather[9].date}th {props.tenDaysWeather[0].month} 2023
+                </span>
             </div>
             {tenDaysWeatherArray.map( e =>
                 <DayWeather

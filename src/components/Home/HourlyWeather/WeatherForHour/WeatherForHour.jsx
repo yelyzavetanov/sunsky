@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import s from "./WeatherForHour.module.css";
-import weatherIcon from "../../../../img/weatherIcons/static/cloudy-night-2.svg";
+import WeatherForHourIcon from "./WeatherForHourIcon/WeatherForHourIcon";
 
 const WeatherForHour = (props) => {
     const [isTheNewDay] =  useState(props.time[0] === "0");
@@ -11,7 +11,7 @@ const WeatherForHour = (props) => {
             <div className={s.time}>{props.time}</div>
             <div className={s.temperature}>{props.temperature}</div>
             <div className={s.description}>
-                <img alt={""} src={props.weatherIcons[props.description]}/>
+                <WeatherForHourIcon weatherIcons={props.weatherIcons} time={props.time} description={props.description}/>
                 {props.description}
             </div>
             <div className={s.humidity}>{props.humidity}</div>
