@@ -1,5 +1,5 @@
 import React from "react";
-// import s from "./WeatherForHourIcon.module.css";
+import s from "./WeatherForHourIcon.module.css";
 
 const WeatherForHourIcon = (props) => {
     const isNight =
@@ -8,7 +8,7 @@ const WeatherForHourIcon = (props) => {
         (Number(props.time[0] + props.time[1]) > 8 && props.time[props.time.length - 2] === "P");
 
     return (
-        <div>
+        <div className={s.weatherForHourIcon}>
             {
                 isNight
                     ? <img alt={""} src={props.weatherIcons.night[props.description]}/>

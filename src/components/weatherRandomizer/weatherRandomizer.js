@@ -1,3 +1,5 @@
+import {monthDays} from "./monthsArray";
+
 class DayOfMonth {
     constructor(month, week, currentDate, day, night, morning, evening) {
         this.month = month;
@@ -31,20 +33,6 @@ class WeatherForHour {
 
 const weatherDescriptions = ["clear", "cloudy", "rain", "snow", "thunderstorm", "fog"];
 const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const monthDays = [
-    {month: "January", days: 31},
-    {month: "February", days: 28},
-    {month: "March", days: 31},
-    {month: "April", days: 30},
-    {month: "May", days: 31},
-    {month: "June", days: 30},
-    {month: "July", days: 31},
-    {month: "August", days: 31},
-    {month: "September", days: 30},
-    {month: "October", days: 31},
-    {month: "November", days: 30},
-    {month: "December", days: 31},
-];
 
 let randomWeekDayIndex = weekDays.indexOf(weekDays[Math.floor(Math.random()*weekDays.length)]);
 
@@ -158,7 +146,6 @@ export function randomizeHourlyWeather() {
         hourlyWeather.push(randomizeHourWeather(hour));
     }
 
-    // console.log(hourlyWeather);
     return hourlyWeather;
 }
 

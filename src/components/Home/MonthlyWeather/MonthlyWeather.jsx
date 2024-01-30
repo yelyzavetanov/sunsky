@@ -4,9 +4,11 @@ import arrowIcon from "../../../img/icon/arrow02.svg";
 import Calendar from "./Calendar/Calendar";
 import SelectedCalendarDay from "./SelectedCalendarDay/SelectedCalendarDay";
 
-const MonthlyWeather = (props) => {
-    const [rerender, setRerender] = useState(false);
+// import * as am5 from "@amcharts/amcharts5";
+// import * as am5xy from "@amcharts/amcharts5/xy";
+// import * as am5percent from "@amcharts/amcharts5/percent";
 
+const MonthlyWeather = (props) => {
     const [selectedDayIndex, setSelectedDayIndex] = useState(10);
     const [year, setYear] = useState(2024);
 
@@ -16,8 +18,8 @@ const MonthlyWeather = (props) => {
     let monthWeatherArray = props.calendar;
 
     let previousMonth;
-
     let nextMonth;
+
     if (months.indexOf(monthWeatherArray[10].month) === 0) {
         previousMonth = months[months.length - 1];
     } else {
@@ -30,17 +32,52 @@ const MonthlyWeather = (props) => {
     }
 
     const changeMonth = (month) => {
-        setRerender(!rerender);
         props.changeCalendarMonth(month);
+
+        if (month === "January" && nextMonth === "January") {
+            setYear(year + 1);
+        } else if (month === "December" && previousMonth === "December") {
+            setYear(year - 1);
+        }
     }
 
     const changeYear = (year) => {
         setYear(year);
-        changeMonth(monthWeatherArray[10].month);
+        props.changeCalendarMonth(monthWeatherArray[10].month);
     }
+
+
+/*    const root = am5.Root.new("chartdiv");
+    const chart = am5percent.PieChart.new(root, {});
+    root.container.children.push(chart);
+
+    const series = chart.series.push(
+        am5percent.PieSeries.new(root, {})
+    );
+    series.set("valueField", "value");
+    series.set("categoryField", "category");
+
+    series.data.setAll([{
+        category: "Research",
+        value: 1000
+    }, {
+        category: "Marketing",
+        value: 1200
+    }, {
+        category: "Sales",
+        value: 850
+    }]);
+
+    root.dispose();*/
+
 
     return (
         <div className={s.monthlyWeather}>
+
+            <div id={"chartdiv"}>
+
+            </div>
+
             <div className={s.title}>Weather for {monthWeatherArray[10].month} {year} in your city</div>
             <div className={s.selectYearContainer}>
                 <div className={s.selectArrowLeftContainer} onClick={() => changeYear(year - 1)}>

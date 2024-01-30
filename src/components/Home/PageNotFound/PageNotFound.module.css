@@ -1,0 +1,15 @@
+.pageNotFound {
+    text-align: left;
+    color: #ffffff;
+}
+
+.title {
+    color: #000000;
+    background: #ffffff;
+    padding: 1em;
+    font-weight: 500;
+}
+
+.errorMessage {
+    padding: 1em;
+}

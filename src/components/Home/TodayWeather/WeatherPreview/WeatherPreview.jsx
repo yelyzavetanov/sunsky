@@ -1,8 +1,10 @@
 import React from "react";
 import s from "./WeatherPreview.module.css";
+import CurrentYear from "../../../Common/CurrentYear/CurrentYear";
 
 const WeatherPreview = (props) => {
     const weather = props.todayWeather;
+    const todayDate = new Date();
 
     // console.log(weather.month);
 
@@ -10,7 +12,7 @@ const WeatherPreview = (props) => {
         <div className={s.weatherPreview}>
             <div className={s.cityContainer}>
                 <span>Your city, your country</span>
-                <span>{weather.date}th {weather.month} 2023</span>
+                <span>{weather.date}th {weather.month} <CurrentYear/></span>
             </div>
             <div className={s.weatherInformation}>
                 <div className={s.mainInformation}>

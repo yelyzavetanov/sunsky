@@ -5,6 +5,8 @@ import HourlyWeather from "./HourlyWeather/HourlyWeather";
 import {Routes, Route} from "react-router-dom";
 import TenDaysWeather from "./TenDaysWeather/TenDaysWeather";
 import MonthlyWeather from "./MonthlyWeather/MonthlyWeather";
+import AboutUs from "./AboutUs/AboutUs";
+import PageNotFound from "./PageNotFound/PageNotFound";
 
 import clearIcon from "../../../src/img/weatherIcons/static/day.svg";
 import clearIconNight from "../../../src/img/weatherIcons/static/night.svg";
@@ -14,7 +16,6 @@ import rainIcon from "../../../src/img/weatherIcons/static/rainy-6.svg";
 import snowIcon from "../../../src/img/weatherIcons/static/snowy-6.svg";
 import thunderstormIcon from "../../../src/img/weatherIcons/static/thunder.svg";
 import fogIcon from "../../../src/img/weatherIcons/static/cloudy.svg";
-import AboutUs from "./AboutUs/AboutUs";
 
 const Home = (props) => {
 
@@ -39,7 +40,6 @@ const Home = (props) => {
 
     return (
         <div className={s.home}>
-            {/*<img src={weatherIcons.night.clear}/>*/}
             <Routes>
                 <Route path={"/hourlyWeather"} element={
                     <HourlyWeather weatherIcons={weatherIcons} hourlyWeather={props.hourlyWeather}/>
@@ -58,6 +58,7 @@ const Home = (props) => {
                 <Route path={"/"} element={
                     <TodayWeather weatherIcons={weatherIcons} todayWeather={props.todayWeather}/>
                 }/>
+                <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </div>
     )

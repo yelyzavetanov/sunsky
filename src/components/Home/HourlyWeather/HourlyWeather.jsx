@@ -1,6 +1,8 @@
 import React from "react";
 import s from "./HourlyWeather.module.css";
 import WeatherForHour from "./WeatherForHour/WeatherForHour";
+import {months} from "../../weatherRandomizer/monthsArray";
+import CurrentYear from "../../Common/CurrentYear/CurrentYear";
 
 const HourlyWeather = (props) => {
     const hoursWeatherArray = props.hourlyWeather
@@ -13,7 +15,9 @@ const HourlyWeather = (props) => {
         <div className={s.hourlyWeather}>
             <div className={s.title}>
                 <span>Hourly weather in your city today</span>
-                <span>20th June 2023</span>
+                <span>
+                    {time.getDate()}th {months[time.getMonth()]} <CurrentYear/>
+                </span>
             </div>
             <div className={s.itemsContainer}>
                 {hoursWeatherArray.map( e =>
@@ -25,7 +29,6 @@ const HourlyWeather = (props) => {
                         description={e.description}
                         humidity={e.humidity}
                         wind={e.wind}
-                        // currentHour={"6 PM"}
                         currentHour={currentHour}
                     />
                 )}

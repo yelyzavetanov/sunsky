@@ -4,6 +4,7 @@ import {
     randomizeTenDaysWeather,
     randomizeTodayWeather
 } from "../../components/weatherRandomizer/weatherRandomizer";
+import {months} from "../../components/weatherRandomizer/monthsArray";
 
 export const increment = createAction('counter/increment');
 const decrement = createAction('counter/decrement');
@@ -17,9 +18,9 @@ export const changeCalendarMonth = createAction("weather/changeCalendarMonth", (
     }
 })
 
-
-const month = "August";
-const day = 8;
+const todayDate = new Date();
+const month = months[todayDate.getMonth()];
+const day = todayDate.getDate();
 
 const initialState = {
     value: 0,
