@@ -67,10 +67,22 @@ export function randomizeCalendar(month) {
 
 function randomizeDaysWeather (arrayMonth, weatherArray, daysNumber) {
     for (let i = daysNumber; i <= daysNumber + arrayMonth.days - 1; i++) {
-        // console.log(weatherArray);
-        weatherArray.push(randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIndex, i));
 
-        if (randomWeekDayIndex === weekDays.length -1) {
+        const numberOfDaysInMonth = monthDays.filter(m => m.month === arrayMonth.month)[0].days;
+        let dateOfDay;
+        let monthOfDay;
+
+        if (i > numberOfDaysInMonth) {
+            dateOfDay = i - numberOfDaysInMonth;
+            monthOfDay = monthDays[monthDays.indexOf(monthDays.filter(m => m.month === arrayMonth.month)[0]) + 1].month;
+        } else {
+            dateOfDay = i;
+            monthOfDay = arrayMonth.month;
+        }
+
+        weatherArray.push(randomizeOneDayWeather(weatherDescriptions, monthOfDay, randomWeekDayIndex, dateOfDay));
+
+        if (randomWeekDayIndex === weekDays.length - 1) {
             randomWeekDayIndex = 0;
         } else {
             randomWeekDayIndex++;
@@ -78,7 +90,7 @@ function randomizeDaysWeather (arrayMonth, weatherArray, daysNumber) {
     }
 }
 
-function randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIndex, dayNumber) {
+function randomizeOneDayWeather(weatherDescriptions, month, randomWeekDayIndex, dayNumber) {
     const dayTemperature = randomizeTemperature();
 
     const day = new HalfOfDay(
@@ -95,7 +107,7 @@ function randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIn
     );
 
     const dayOfMonth = new DayOfMonth(
-        arrayMonth.month,
+        month,
         weekDays[randomWeekDayIndex],
         dayNumber.toString(),
         day,
@@ -158,5 +170,5 @@ export function randomizeTenDaysWeather(month, dayNumber) {
 export function randomizeTodayWeather(month, dayNumber) {
     const arrayMonth = monthDays.filter(e => e.month === month)[0];
 
-    return randomizeOneDayWeather(weatherDescriptions, arrayMonth, randomWeekDayIndex, dayNumber);
+    return randomizeOneDayWeather(weatherDescriptions, arrayMonth.month, randomWeekDayIndex, dayNumber);
 }

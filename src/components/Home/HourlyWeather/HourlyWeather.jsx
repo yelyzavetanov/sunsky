@@ -3,9 +3,10 @@ import s from "./HourlyWeather.module.css";
 import WeatherForHour from "./WeatherForHour/WeatherForHour";
 import {months} from "../../weatherRandomizer/monthsArray";
 import CurrentYear from "../../Common/CurrentYear/CurrentYear";
+import HourlyWeatherChart from "../../Common/WeatherChart/HourlyWeatherChart/HourlyWeatherChart";
 
 const HourlyWeather = (props) => {
-    const hoursWeatherArray = props.hourlyWeather
+    const hoursWeatherArray = props.hourlyWeather;
 
     let time = new Date();
     const currentHour = time.toLocaleString('en-US', { hour: 'numeric', hour12: true });
@@ -19,6 +20,7 @@ const HourlyWeather = (props) => {
                     {time.getDate()}th {months[time.getMonth()]} <CurrentYear/>
                 </span>
             </div>
+            <HourlyWeatherChart hourlyWeather={props.hourlyWeather} />
             <div className={s.itemsContainer}>
                 {hoursWeatherArray.map( e =>
                     <WeatherForHour
