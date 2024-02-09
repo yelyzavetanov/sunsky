@@ -61,3 +61,18 @@
 .detailsDay {
     font-weight: 500;
 }
+
+@media screen and (max-width: 40em) {
+    .humidity, .wind {
+        display: none;
+    }
+
+    .day, .temperature, .description, .moreDetailsButton {
+        width: auto;
+    }
+
+    .dayWeather {
+        justify-content: space-between;
+        padding: 0 2.5em;
+    }
+}

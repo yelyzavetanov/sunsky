@@ -1,12 +1,17 @@
 .weatherForHour, .weatherForNewDayHour {
     display: flex;
-    padding: 0 1em;
-    justify-content: space-evenly;
+    padding: 0 3em;
+    justify-content: space-between;
     align-items: center;
 }
 
-.time {
+.time, .wind {
+    width: 6em;
+}
 
+.time {
+    display: flex;
+    flex-direction: column;
 }
 
 .temperature {
@@ -17,14 +22,12 @@
 .description {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 5em;
 }
 
-.humidity {
-
-}
-
-.wind {
-
+.humidity, .temperature {
+    width: 3em;
 }
 
 .weatherForNewDayHour {
@@ -32,6 +35,29 @@
     color: #000000;
 }
 
-.weatherForNewDayHour img {
-    filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.1));
+.currentHour {
+    font-weight: 500;
+    /*padding-right: 1em;*/
+}
+
+.notCurrentHour {
+    display: none;
+}
+
+@media screen and (max-width: 40em) {
+    .humidity {
+        display: none;
+    }
+
+    .time, .wind {
+        width: 3em;
+    }
+
+    .temperature {
+        width: 2em;
+    }
+
+    .description {
+        width: auto;
+    }
 }

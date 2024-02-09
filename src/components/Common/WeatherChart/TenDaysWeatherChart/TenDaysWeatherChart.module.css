@@ -4,3 +4,9 @@
     background: #ffffff;
     /*background: linear-gradient(#ffcc0055, transparent);*/
 }
+
+@media screen and (max-width: 40em) {
+    .weatherChart {
+        padding: 0;
+    }
+}

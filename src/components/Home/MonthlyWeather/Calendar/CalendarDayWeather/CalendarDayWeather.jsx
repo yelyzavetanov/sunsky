@@ -15,7 +15,7 @@ const CalendarDayWeather = (props) => {
                     ? <div className={s.shownCalendarDay}>
                         <div>
                             <span className={s.weekDay}>{props.dayWeather.week + " "}</span>
-                            {props.dayWeather.date}th
+                            {props.dayWeather.date}
                         </div>
                         <div className={s.iconContainer}>
                             <img alt={""} src={props.weatherIcons.day[props.dayWeather.day.description]}/>

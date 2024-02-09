@@ -3,11 +3,16 @@ import s from "./WeatherForHour.module.css";
 import WeatherForHourIcon from "./WeatherForHourIcon/WeatherForHourIcon";
 
 const WeatherForHour = (props) => {
-    const [isTheCurrentHour] = useState(props.time === props.currentHour);
+    // const [isTheCurrentHour] = useState(props.time === props.currentHour);
+    const isTheCurrentHour = props.time === props.currentHour;
+    const isTheMidnight = props.time === "0 AM";
 
     return (
-        <div className={isTheCurrentHour ? s.weatherForNewDayHour : s.weatherForHour}>
-            <div className={s.time}>{props.time}</div>
+        <div className={isTheMidnight ? s.weatherForNewDayHour : s.weatherForHour}>
+            <div className={s.time}>
+                <span className={isTheCurrentHour ? s.currentHour : s.notCurrentHour}>now</span>
+                {props.time}
+            </div>
             <div className={s.temperature}>{props.temperature}</div>
             <div className={s.description}>
                 <WeatherForHourIcon weatherIcons={props.weatherIcons} time={props.time} description={props.description}/>

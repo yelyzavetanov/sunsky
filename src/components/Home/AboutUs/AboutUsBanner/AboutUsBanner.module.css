@@ -1,0 +1,49 @@
+.banner {
+    color: #ffffff;
+    /*backdrop-filter: contrast(100%);*/
+    background-image: url("https://4kwallpapers.com/images/wallpapers/thunderstorm-lightning-flashing-stormy-clouds-bad-weather-3840x2160-5714.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bannerShadow {
+    width: 100%;
+    /*padding: 1em;*/
+    background: linear-gradient(to right, #151544, transparent);
+}
+
+.bigLogo {
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    text-shadow: -1px 0 0.2em #000000;
+    padding: 1em 1em 0.5em 1em;
+}
+
+.bannerTagline {
+    /*font-weight: 300;*/
+    padding-left: 0.5em;
+    /*font-size: 1em;*/
+}
+
+.bannerBottomText {
+    padding: 0 1.5em 2em;
+    font-weight: 300;
+}
+
+.topBannerText {
+    padding: 2em 1.7em 0;
+
+}
+
+.bannerInfo {
+    padding: 0 1.5em 2em;
+    width: 30em;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 40em) {
+    .bannerInfo {
+        width: auto;
+    }
+}

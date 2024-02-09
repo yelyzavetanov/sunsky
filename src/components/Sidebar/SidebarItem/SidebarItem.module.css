@@ -10,6 +10,15 @@
     padding: 0.5em;
 }
 
+.itemInfo a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.itemInfo a:hover {
+    text-decoration: underline;
+}
+
 .sidebarItem img {
     width: 100%;
     height: auto;

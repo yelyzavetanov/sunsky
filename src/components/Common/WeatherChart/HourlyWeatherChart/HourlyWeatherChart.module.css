@@ -2,3 +2,9 @@
     background: #ffffff;
     padding: 0 1em 1em;
 }
+
+@media screen and (max-width: 40em) {
+    .weatherChart {
+        padding: 0;
+    }
+}

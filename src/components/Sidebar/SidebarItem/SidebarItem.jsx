@@ -5,7 +5,7 @@ const SidebarItem = (props) => {
     return (
         <div className={s.sidebarItem}>
             <img alt={""} src={props.imgUrl}/>
-            <div className={s.itemInfo}>{props.itemInfo} Learn more</div>
+            <div className={s.itemInfo}>{props.itemInfo} <a href={"https://www.google.com/"}>Learn more</a></div>
         </div>
     )
 }

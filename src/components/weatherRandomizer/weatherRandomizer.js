@@ -57,10 +57,7 @@ export function randomizeCalendar(month) {
     const arrayMonth = monthDays.filter(e => e.month === month)[0];
 
     randomizeDaysWeather(arrayMonth, monthWeatherArray, 1);
-
-    if (monthWeatherArray.length % 7 !== 0) {
-        editCalendar(monthWeatherArray, weekDays);
-    }
+    editCalendar(monthWeatherArray, weekDays);
 
     return monthWeatherArray;
 }
@@ -124,7 +121,7 @@ function editCalendar (monthWeatherArray, weekDays) {
         console.log("NULL");
     }
 
-    if(monthWeatherArray[0].week !== "Sun" && /*monthWeatherArray.length % 7 !== 0 &&*/ monthWeatherArray[0] !== null) {
+    if(monthWeatherArray[0].week !== "Sun" && monthWeatherArray[0] !== null) {
         const weekDayIndex = weekDays.indexOf(monthWeatherArray[0].week);
         for (let i = 0; i < weekDayIndex; i++) {
             monthWeatherArray.unshift(null);
@@ -147,13 +144,25 @@ function randomizeHourWeather(hour) {
 
 export function randomizeHourlyWeather() {
     const hourlyWeather = [];
+
+    const currentHour = new Date().getHours();
+    // const currentHour = 6;
     let hour = 0;
 
+    let nextHour;
+
     for (let i = 0; i < 24; i++) {
-        if (i <= 12) {
-            hour = i + " AM";
-        } else {
-            hour = i - 12 + " PM";
+        nextHour = currentHour + i;
+        console.log(nextHour);
+
+        if (nextHour > 36) {
+            hour = nextHour - 36 + " PM";
+        } else if (nextHour >= 24) {
+            hour = nextHour - 24 + " AM";
+        } else if (nextHour >= 12) {
+            hour = nextHour - 12 + " PM";
+        } else if (nextHour <= 12) {
+            hour = nextHour + " AM";
         }
         hourlyWeather.push(randomizeHourWeather(hour));
     }

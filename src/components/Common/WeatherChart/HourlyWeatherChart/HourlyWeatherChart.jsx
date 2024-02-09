@@ -22,7 +22,7 @@ function HourlyWeatherChart (props) {
         return gradientBg;
     }
 
-    console.log(props.hourlyWeather);
+    // console.log(props.hourlyWeather);
 
     const chartData = {
         labels: props.hourlyWeather.map(h => h.hour),

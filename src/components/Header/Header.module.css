@@ -25,6 +25,10 @@ header {
     text-decoration: none;
 }
 
+.link:hover {
+    font-weight: 500;
+}
+
 .selectedLink {
     font-weight: 500;
 }

@@ -1,6 +1,7 @@
 .aboutUs {
-    color: white;
+    background: white;
     text-align: left;
+    height: 100%;
 }
 
 .title {
@@ -12,4 +13,10 @@
 
 .mainInfo {
     padding: 1em;
+    color: #000000;
+}
+
+.contactUsText {
+    text-align: center;
+    font-weight: 500;
 }
