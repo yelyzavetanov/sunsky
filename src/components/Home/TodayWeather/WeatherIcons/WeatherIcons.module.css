@@ -1,5 +1,6 @@
 .weatherIcons {
     background: #ffffff;
+    padding-bottom: 1em;
 }
 
 .iconsContainer {
@@ -22,8 +23,8 @@
 
 @media screen and (max-width: 40em) {
     .iconsContainer img {
-        width: 6em;
-        height: 6em;
+        width: 5em;
+        height: 5em;
     }
 
     .iconsContainer {

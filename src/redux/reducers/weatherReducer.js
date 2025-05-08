@@ -6,10 +6,6 @@ import {
 } from "../../components/weatherRandomizer/weatherRandomizer";
 import {months} from "../../components/weatherRandomizer/monthsArray";
 
-export const increment = createAction('counter/increment');
-const decrement = createAction('counter/decrement');
-const incrementByAmount = createAction('counter/incrementByAmount');
-
 export const changeCalendarMonth = createAction("weather/changeCalendarMonth", (month) => {
     return {
         payload: {
@@ -32,7 +28,6 @@ const initialState = {
 
     weatherBackgrounds: {
         clear: {
-            // backgroundImage: "url(\"https://free4kwallpapers.com/uploads/originals/2015/10/07/clear-sky-hd-wallpaper.jpg\")",
             backgroundImage: "url(\"https://images.unsplash.com/photo-1601345459799-245d61f56121?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\")",
         },
         cloudy: {
@@ -45,7 +40,6 @@ const initialState = {
             backgroundImage: "url(\"https://images.unsplash.com/photo-1547754980-3df97fed72a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\")",
         },
         thunderstorm: {
-            // backgroundImage: "url(\"https://images.unsplash.com/photo-1561485132-59468cd0b553?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\")",
             backgroundImage: "url(\"https://images.unsplash.com/photo-1465799522714-8eb0e6fccf73?q=80&w=1913&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\")",
         },
         fog: {
@@ -56,15 +50,6 @@ const initialState = {
 
 const weatherReducer = createReducer(initialState, (builder) => {
     builder
-        .addCase(increment, (state) => {
-            state.value++;
-        })
-        .addCase(decrement, (state) => {
-            state.value--;
-        })
-        .addCase(incrementByAmount, (state, action) => {
-            state.value += action.payload;
-        })
         .addCase(changeCalendarMonth, (state, action) => {
             state.calendarDays = randomizeCalendar(action.payload.month);
         })

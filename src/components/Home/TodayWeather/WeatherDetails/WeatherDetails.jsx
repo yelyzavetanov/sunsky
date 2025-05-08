@@ -6,7 +6,7 @@ const WeatherDetails = (props) => {
 
     return (
         <div className={s.weatherDetails}>
-            <div className={s.cityContainer}>Weather today in your city</div>
+            <div className={s.cityContainer}>Weather today in {props.location.city}</div>
             <div className={s.detailsContainer}>
                 <div className={s.temperatureContainer}>
                     <div className={s.weatherDetailsItem}>

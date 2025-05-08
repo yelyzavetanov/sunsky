@@ -12,7 +12,7 @@ const WeatherIcons = (props) => {
 
     return (
         <div className={s.weatherIcons}>
-            <div className={s.cityContainer}>Weather forecast for today in your city</div>
+            <div className={s.cityContainer}>Weather forecast for today in {props.location.city}</div>
             <div className={s.iconsContainer}>
                 {weatherIconsInfo.map( e =>
                     <WeatherIcon

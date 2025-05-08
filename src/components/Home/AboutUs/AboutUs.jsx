@@ -13,7 +13,8 @@ const AboutUs = () => {
                 This is a test project, made by a student of vntu. We have no team, no office and no customers.
                 We are just doing what we want to.
                 <br/><br/>
-                Here is some information about weather.<br/>
+                Here is some information about weather
+                <br/><br/>
                 Weather is the ever-changing atmospheric conditions that encompass elements such as temperature,
                 precipitation, humidity, wind speed, and atmospheric pressure. It plays a crucial role in shaping
                 our daily activities, influencing everything from outdoor plans to agricultural practices.

@@ -56,7 +56,11 @@ const Home = (props) => {
                 }/>
                 <Route path={"/aboutUS"} element={<AboutUs/>}/>
                 <Route path={"/"} element={
-                    <TodayWeather weatherIcons={weatherIcons} todayWeather={props.todayWeather}/>
+                    <TodayWeather
+                        location={props.location}
+                        weatherIcons={weatherIcons}
+                        todayWeather={props.todayWeather}
+                    />
                 }/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>

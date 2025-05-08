@@ -23,6 +23,7 @@ function App(props) {
                     <Main>
                         <Sidebar/>
                         <Home
+                            location={props.location.location}
                             changeCalendarMonth={props.changeCalendarMonth}
                             calendar={weather.calendarDays}
                             tenDaysWeather={weather.tenDaysWeather}
@@ -39,6 +40,7 @@ function App(props) {
 
 const mapStateToProps = (state) => ({
     weather: state.weather,
+    location: state.location,
     state,
 })
 

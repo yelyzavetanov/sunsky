@@ -4,10 +4,6 @@ import arrowIcon from "../../../img/icon/arrow02.svg";
 import Calendar from "./Calendar/Calendar";
 import SelectedCalendarDay from "./SelectedCalendarDay/SelectedCalendarDay";
 
-// import * as am5 from "@amcharts/amcharts5";
-// import * as am5xy from "@amcharts/amcharts5/xy";
-// import * as am5percent from "@amcharts/amcharts5/percent";
-
 const MonthlyWeather = (props) => {
     const [selectedDayIndex, setSelectedDayIndex] = useState(10);
     const [year, setYear] = useState(2024);
@@ -46,38 +42,8 @@ const MonthlyWeather = (props) => {
         props.changeCalendarMonth(monthWeatherArray[10].month);
     }
 
-
-/*    const root = am5.Root.new("chartdiv");
-    const chart = am5percent.PieChart.new(root, {});
-    root.container.children.push(chart);
-
-    const series = chart.series.push(
-        am5percent.PieSeries.new(root, {})
-    );
-    series.set("valueField", "value");
-    series.set("categoryField", "category");
-
-    series.data.setAll([{
-        category: "Research",
-        value: 1000
-    }, {
-        category: "Marketing",
-        value: 1200
-    }, {
-        category: "Sales",
-        value: 850
-    }]);
-
-    root.dispose();*/
-
-
     return (
         <div className={s.monthlyWeather}>
-
-            <div id={"chartdiv"}>
-
-            </div>
-
             <div className={s.title}>Weather for {monthWeatherArray[10].month} {year} in your city</div>
             <div className={s.selectYearContainer}>
                 <div className={s.selectArrowLeftContainer} onClick={() => changeYear(year - 1)}>

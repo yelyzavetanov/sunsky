@@ -4,14 +4,11 @@ import CurrentYear from "../../../Common/CurrentYear/CurrentYear";
 
 const WeatherPreview = (props) => {
     const weather = props.todayWeather;
-    const todayDate = new Date();
-
-    // console.log(weather.month);
 
     return (
         <div className={s.weatherPreview}>
             <div className={s.cityContainer}>
-                <span>Your city, your country</span>
+                <span>{props.location.city}, {props.location.country}</span>
                 <span>{weather.date}th {weather.month} <CurrentYear/></span>
             </div>
             <div className={s.weatherInformation}>

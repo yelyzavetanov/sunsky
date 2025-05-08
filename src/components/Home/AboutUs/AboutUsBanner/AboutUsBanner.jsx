@@ -8,20 +8,18 @@ function AboutUsBanner () {
         <div className={s.banner}>
             <div className={s.bannerShadow}>
                 <div className={s.bigLogo}>
-                    {/*<img className={s.logoIcon} alt={""} src={logoIcon}/>*/}
-                    {/*<span className={s.logoText}>SunSky</span>*/}
                     <Logo/>
-                    <span className={s.bannerTagline}>{" - "}know your weather.</span>
+                    <span className={s.bannerTagline}>{" - "}Your trusted weather randomizer</span>
                 </div>
                 <div className={s.bannerBottomText}>
-                    Started since November 2023.
+                    Since May 2025.
                 </div>
                 <div className={s.bannerInfo}>
-                    Your trusted source for precise weather forecasts.<br/>
-                    Get detailed, location-specific updates on temperature, precipitation,
-                    and wind speed effortlessly.<br/>
-                    With intuitive design and expert insights,
-                    stay ahead of the weather with ease.
+                    Your trusted source for precise weather forecasts.<br/><br/>
+                    {/*Get detailed, location-specific updates on temperature, precipitation,*/}
+                    {/*and wind speed effortlessly.<br/><br/>*/}
+                    {/*With intuitive design and expert insights,*/}
+                    {/*stay ahead of the weather with ease.*/}
                 </div>
             </div>
         </div>

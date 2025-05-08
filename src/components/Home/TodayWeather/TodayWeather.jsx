@@ -8,9 +8,17 @@ const TodayWeather = (props) => {
     // console.log(props.todayWeather);
     return (
         <div className={s.todayWeatherBlock}>
-            <WeatherPreview weatherIcons={props.weatherIcons} todayWeather={props.todayWeather}/>
-            <WeatherIcons weatherIcons={props.weatherIcons} todayWeather={props.todayWeather}/>
-            <WeatherDetails todayWeather={props.todayWeather}/>
+            <WeatherPreview
+                location={props.location}
+                weatherIcons={props.weatherIcons}
+                todayWeather={props.todayWeather}
+            />
+            <WeatherIcons
+                location={props.location}
+                weatherIcons={props.weatherIcons}
+                todayWeather={props.todayWeather}
+            />
+            <WeatherDetails location={props.location} todayWeather={props.todayWeather}/>
         </div>
     )
 }
